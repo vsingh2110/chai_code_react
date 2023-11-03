@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Work, { Work2 } from './assets/work'
+import Work, { Work2 ,Work3, Work4, Work5, Work6, Work7 }  from './assets/work'
 import './App.css'
 
 
@@ -10,7 +10,7 @@ import React, { Component } from 'react'
 class App extends Component {
    constructor(){
     super();
-    this.state={data:1}
+    this.state={data:1,person:"maggi"}
    }
 
    countPlus(){
@@ -38,7 +38,22 @@ class App extends Component {
             <br></br>
             <Work/>
             <Work2/>
+
+          
+            <Work3 person={this.state.person} email={"ninja@gmail.com"} age={10}  />
+            <Work3 person={"nigga"} email={"nigga@gmail.com"} age={20} />
+            <Work3 person={"nonu"} email={"nonu@gmail.com"} age={10} />
+
+            <Work4 person={"ninja"} email={"ninja@gmail.com"} age={10} />
+            <Work4 person={"nigga"} email={"nigga@gmail.com"} age={20} />
+            <Work4 person={"nonu"} email={"nonu@gmail.com"} age={10} />
+            <button onClick={()=>{this.setState({person:"niggggga"})}} >Change</button>
             
+
+            <Work5/>
+
+            <Work6/>
+            <Work7/>
       </>
     )
   }
