@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import UserProps from "./UserProps";
+import UserProps, {UserProps1, UserProps2} from "./UserProps";
+
 
 const User = () => {
   let [count, setCount] = useState(0);
@@ -182,3 +183,91 @@ const User2 = () => {
 };
 
 export { User2 };
+
+
+const User3 = () => {
+
+  const users = [
+    {
+      name: "ninja",
+      email: "ninja@gmail.com",
+      address: [
+        { Hno: "21", city: "new delhi", State: "Delhi" },
+        { Hno: "100", city: "faridabad", State: "Haryana" },
+        { Hno: "2100", city: "bangalore", State: "Karnataka" },
+        { Hno: "100", city: "Hyderabad", State: "Telangana" },
+      ],
+    },
+    {
+      name: "niggaaa",
+      email: "niggaaa@gmail.com",
+      address: [
+        { Hno: "21", city: "new delhi", State: "Delhi" },
+        { Hno: "100", city: "faridabad", State: "Haryana" },
+        { Hno: "2100", city: "bangalore", State: "Karnataka" },
+        { Hno: "100", city: "Hyderabad", State: "Telangana" },
+      ],
+    },
+    {
+      name: "miyoko",
+      email: "miyoko@gmail.com",
+      address: [
+        { Hno: "21", city: "new delhi", State: "Delhi" },
+        { Hno: "100", city: "faridabad", State: "Haryana" },
+        { Hno: "2100", city: "bangalore", State: "Karnataka" },
+        { Hno: "100", city: "Hyderabad", State: "Telangana" },
+      ],
+    },
+    {
+      name: "hatori",
+      email: "hatori@gmail.com",
+      address: [
+        { Hno: "21", city: "new delhi", State: "Delhi" },
+        { Hno: "100", city: "faridabad", State: "Haryana" },
+        { Hno: "2100", city: "bangalore", State: "Karnataka" },
+        { Hno: "100", city: "Hyderabad", State: "Telangana" },
+      ],
+    },
+  ];
+
+  return (
+    <div>
+      {
+        users.map((item,i)=>(
+          <>
+        
+          <UserProps1 data={item}/>
+         </>
+        )
+        )
+      }
+    </div>
+  )
+}
+
+export {User3}
+
+
+
+
+const User4 = () => {
+  function parentAlert(data){
+    alert (data);
+  }
+  return (
+
+    
+    
+    <div>
+    <br/>
+    <br/>
+    <br/>
+    <p>lifting state up</p>
+    <p>lifting up parent is </p>
+
+    <UserProps2 alert={parentAlert}/>
+    </div>
+  )
+}
+
+export {User4}

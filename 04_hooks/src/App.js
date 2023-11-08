@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import User, {User1, User2} from './User.js';
+import User, {User1, User2, User3, User4} from './User.js';
 
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
       <User/>
       <User1/>
       <User2/>
+      <User3/>
+      <User4/>
     </div>
   );
 }
