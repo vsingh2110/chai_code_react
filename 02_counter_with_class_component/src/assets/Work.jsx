@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Work = () => {
-  let [name, setName] = useState("Ninja");
+  let [name, setName] = useState("Ninja1");
   let [printName, setPrintName] = useState(false);
   return (
     <div>
@@ -40,7 +40,7 @@ const Work2 = () => {
         <br/>
         <br/>
         <br/>
-        <h2>Props in functional component</h2>
+       
       </div>
     );
   };
@@ -70,7 +70,7 @@ const Work2 = () => {
     render() {
       return (
         <div style={{backgroundColor:"red"}}>
-        <h2>Props in class component</h2>
+        
         <p>Name is {this.props.person}</p>
         <p>Email is {this.props.email}</p>
         <p>Age is {this.props.age}</p>

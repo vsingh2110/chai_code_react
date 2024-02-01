@@ -18,7 +18,7 @@ class App extends Component {
    }
 
    countMinus(){
-    this.setState({data:this.state.data-1})
+      this.setState({data:this.state.data-1})
    }
 
   render() {
@@ -31,7 +31,7 @@ class App extends Component {
             
             <br></br>
             <br></br>
-            <button onClick={()=>this.setState({data:this.state.data-1})}> Increase Value </button>
+            <button onClick={()=>this.setState({data:this.state.data-1})}> Decrease Value </button>
             <button onClick={()=>this.countMinus()}> Decrease Value </button>
 
             <br></br>
@@ -39,11 +39,12 @@ class App extends Component {
             <Work/>
             <Work2/>
 
-          
+            <h2>Props in functional component</h2>
             <Work3 person={this.state.person} email={"ninja@gmail.com"} age={10}  />
             <Work3 person={"nigga"} email={"nigga@gmail.com"} age={20} />
             <Work3 person={"nonu"} email={"nonu@gmail.com"} age={10} />
-
+            
+            <h2>Props in class component</h2>
             <Work4 person={"ninja"} email={"ninja@gmail.com"} age={10} />
             <Work4 person={"nigga"} email={"nigga@gmail.com"} age={20} />
             <Work4 person={"nonu"} email={"nonu@gmail.com"} age={10} />
